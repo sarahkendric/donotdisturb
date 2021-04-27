@@ -24,7 +24,7 @@
          font-weight: 200;
          font-style: normal;
          font-size: 12px;
-         color: black;
+         color: #2D2639;
          line-height: -5em;
          text-align: center;
          padding-left: 25px;
@@ -35,10 +35,11 @@
           font-family: capellina-script, sans-serif;
           font-weight: 400;
           font-style: normal;
-          font-size: 40px;
-          color: black;
+          font-size: 100px;
+          color: #FCF165;
+          -webkit-text-stroke: 1px #FCF165;
           text-align: center;
-          margin-bottom: -10px;
+          margin-bottom: -28px;
           margin-top: 10vh;
         }
 
@@ -51,26 +52,15 @@
         z-index: auto;
         }
 
-        #item1 {
-        width: 85vw;
-        background-color: #FFF5FC;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: #EB62AE;
-       
-        }
-
-
         #item2 {
         overflow: hidden;
         height: 20vh;
         width: 85vw;
-        background-image: url("amethyst.jpg");
-        border-radius: 10px;
+        background-image: url("garnet.jpg");
+        border-radius: 20px;
         border-style: solid;
-        border-width: 1px;
-        border-color: #EB62AE;
+        border-width: 2px;
+        border-color: #FCF165;
         }
 
 
@@ -81,15 +71,64 @@
         }
 
 
-
-
         a {
         color: #a6dcf8;
         }
 
+        input[type='checkbox'] { display: none; } 
+    .wrap-collabsible { width: 85vw; } 
 
+    .lbl-toggle { 
+      display: block; 
+      border-radius: 20px;
+      text-align: center; 
+      background: #FCF165; 
+      color: black;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 14px;
+    } 
 
- 
+    .lbl-toggle::before { 
+      content: '+';     
+      display: inline-block; 
+      vertical-align: middle; 
+      margin-right: .7rem; 
+      transform: translateY(-2px); 
+      transition: transform .2s ease-out; 
+    } 
+
+    .toggle:checked+.lbl-toggle::before { 
+      transform: rotate(90deg) 
+      translateX(-3px); 
+    } 
+    .collapsible-content { 
+      max-height: 0px; 
+      overflow: hidden; 
+      transition: max-height .25s ease-in-out; 
+    } 
+
+    .toggle:checked + .lbl-toggle + .collapsible-content { 
+      max-height: 250vh;
+    } 
+
+    .toggle:checked+.lbl-toggle { border-bottom-right-radius: 0;    border-bottom-left-radius: 0; } 
+
+    .collapsible-content .content-inner { 
+      background: #FFF; 
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #FCF165;
+      padding: .5rem 1rem; 
+    } 
+
+    .collapsible-content p { margin-bottom: 0; }
+
 
       @media screen and (min-width: 1000px) {
         body {
@@ -104,7 +143,7 @@
   <body>
 
     <div id="text">
-      <h1>the mind</h1>
+      <h1>the body</h1>
       <p>allow your breath to align with the animation. this is the "relaxing breath:" <br>in for 4, hold for 7, out for 8.</p>
     </div>
 
@@ -114,28 +153,47 @@
     </div>
 
     <div id="container">
-
+<br>
     <div id="breathe">
-     <img id="mindbreathe" src="mindbreathe.gif" width="280px">
+     <img id="bodybreathe" src="bodybreathe.gif" width="280px">
     </div>
 
     <br><br>
 
-    <div id="item1">
-      <p>
+    <div class="wrap-collabsible"> 
       <br>
-      I am present. I am here. I am breath. <br><br>
-      Bring awareness to the right hand.<br><br>
-      Notice each finger of the right hand.<br><br>
-      Touch thumb to index finger...thumb to middle finger...thumb to fourth finger...thumb to pinkie finger...thumb to fourth finger...thumb to middle finger...thumb to index finger. Relax the hand. Relax the fingers. Notice the left hand.<br><br>
-      Notice each finger of the left hand.<br><br>
-      Touch left thumb to index finger...thumb to middle finger...thumb to fourth finger...thumb to pinkie finger...thumb to fourth finger...thumb to middle finger thumb to index finger.   Relax the hand.   Relax the fingers.<br>
-      <br><br>
+    <input id="collapsible" class="toggle" type="checkbox"> 
+    <label for="collapsible" class="lbl-toggle">Guided Meditation</label>
+  
+    <div class="collapsible-content"><div class="content-inner">
+    <p>
+      <br>
+      Feel the connection between your body and the floor. Notice each point that connects your body to the floor.<br><br>
+      (Pause)<br><br>
+      Begin to feel the heaviness of the body sinking into the floor.<br><br>
+      Now come to notice the breath. Feel the belly rise and fall. Feel the chest rise and fall.<br><br>
+      Begin to feel the lightness of the body as you bring awareness to your breath. The body is completely relaxed. The mind is completely aware. The body is feeling light.<br><br>
+      Bring awareness to the toes. Feel the toes on the right foot. Envision your toes attached to your left foot. Left big toe...fourth toe...third toe...second toe...pinkie toe. The left foot. The heel. The sole of the foot. The ankle. The whole of the left foot. The right foot. Right big toe...fourth toe...third toe...second toe...pinkie toe. The right foot. The heel. The sole of the foot. The ankle. The whole of the right foot. Both feet together.<br><br>
+      (Pause.)<br><br>
+      The left leg. The shin. The calf muscle. The knee. The thigh. The left buttock. The whole of the left leg. The right leg. The shin. The calf muscle. The knee. The thigh. The right buttock. The whole of the right leg. Both legs together.<br><br>
+      (Pause.)<br><br>
+      The hips. The lower back. The middle back. The upper back. The whole back. The whole back. The whole back.<br><br>
+      Left shoulder blade. Right shoulder blade. Left shoulder. Left upper arm. Left elbow. Left lower arm. Left wrist. Left hand. Right shoulder. Right upper arm. Right elbow. Right lower arm. Right wrist. Right hand. Both arms together.<br><br>
+      The chest. The ribs. The belly. The whole of the front body. The whole of the front body. The whole of the front body.<br><br>
+      The neck. The back of the head. The forehead. The left eyebrow. The right eyebrow. The space in between the eyebrows. The left eye. The right eye. The left cheek. The right cheek. The jaw. The tongue. The lips. The chin. The throat. The whole of the head. The whole head together. The whole body together.<br><br>
+      Feel the lightness of the whole body together.<br><br>
+      Relax and feel heavy. Sink into the floor. Relax the whole body.<br><br>
+      Relax.<br><br>
+      Feel the body connected to the floor.<br><br>
+      Feel the awareness of your body.<br><br>
+      Begin to make small movements.<br><br><br>
       <a href="https://yoga.lovetoknow.com/Guided_Meditation_Script"><i>source</i></a><br><br>
     </p>
     </div>
+    </div>
+    </div>
 
-    <br><br>
+    <br>
 
     <div id="item2"></div>
 
@@ -146,19 +204,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="script.js"></script>
   </body>
 
   </html>
+
+
+
+
