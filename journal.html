@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>416: reflection</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://use.typekit.net/ttk4hxv.css">
+
+    <style>
+
+      @media only screen 
+        and (min-device-width: 375px) 
+        and (max-device-width: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+          body {
+          color: white;
+          margin: 0;
+          background-color: #F099CB;
+        }
+
+
+      #myFrame {
+        background-color: white;
+        border-color: transparent;
+        box-shadow: 0px 0px 20px #FFCBF0;
+        z-index: auto;
+      }
+
+      #container1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        z-index: auto;
+      }
+
+      #container2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        z-index: auto;
+      }
+
+      button {
+      font-family: capellina-script, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 20px;
+      color: #f9cbdf;
+      background-color: #FF0000;
+      border-color: transparent;
+      box-shadow: 0px 0px 20px #FFCBF0;
+      padding-left: 40px;
+      padding-right: 40px;
+      border-radius: 20px;
+      }
+
+      #arrows {
+          position: fixed;
+          z-index: 5;
+          margin-top: 45vh;
+          left: 20%; 
+        }
+
+        #text {
+          margin-top: 10vh;
+        }
+
+        p {
+          font-family: ibm-plex-mono, sans-serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 16px;
+         color: #fff;
+         line-height: 20px;
+         text-align: center;
+         padding-left: 25px;
+         padding-right: 25px;
+        }
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="text">
+      <p>if you wish, use this printable journal template to express your emotions and gratitude.</p>
+    </div>
+
+<div id="container1">
+    <iframe src="journaltemplate.pdf" id="myFrame" frameborder="0" style="border:0;" width="300" height="450">
+    </iframe>
+  </div>
+
+    <br><br>
+  <div id="container2">
+    <button id="button" type="button" onclick="printJS({printable:'journaltemplate.pdf', type:'pdf', showModal:true})">
+    Print Me</button>
+  </div>
+
+  <div id="arrows">
+     <a href="thoughtforms.html"><img id="arrow1" src="arrow1.png" width="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="thoughtforms.html"><img id="arrow2" src="arrow2.png" width="70px"></a>
+    </div>
+
+
+
+
+
+    <script src="print.js">
+
+  let print = () => {
+      let objFra = document.getElementById('myFrame');
+        objFra.contentWindow.focus();
+        objFra.contentWindow.print();
+    }
+    
+    // Using regular js features.
+    
+//     function print() {
+//         var objFra = document.getElementById('myFrame');
+//         objFra.contentWindow.focus();
+//         objFra.contentWindow.print();
+//     }
+
+</script>
+
+
+  </body>
+
+  </html>
