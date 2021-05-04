@@ -10,19 +10,68 @@
 
     <style>
 
-      @media only screen 
-        and (min-device-width: 375px) 
-        and (max-device-width: 667px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-          body {
-          color: white;
-          margin: 0;
-          background-color: #F099CB;
+      #mobileonly {display: none;}
+      #desktoponly {display: block;}
+
+      body {
+          background: linear-gradient(-10deg, #F099CB, #FFD6ED, #FF59B6, #FFB0DD, #F099CB, #FFC8E7);
+          background-size: 300% 300%;
+          animation: gradient 15s ease infinite;
         }
+
+          @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+
+      p {
+          font-family: ibm-plex-mono, sans-serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 12px;
+         color: #fff;
+         line-height: -5em;
+         text-align: center;
+         padding-left: 25px;
+         padding-right: 25px;
+        }
+
+        input { 
+      border-radius: 20px;
+      text-align: center; 
+      color: #f9cbdf;
+      background-color: #FF0000;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 12px;
+      text-align: center;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      border-style: none;
+      width: 390px;
+      z-index: 10;
+      margin-top: -15px;
+    } 
+
+     #text {
+      margin-bottom: -50px;
+     }
 
 
       #myFrame {
         background-color: white;
+        margin-top: 10vh;
         border-color: transparent;
         box-shadow: 0px 0px 20px #FFCBF0;
         z-index: auto;
@@ -33,13 +82,17 @@
         justify-content: center;
         text-align: center;
         z-index: auto;
+        margin-top: -2vh;
       }
 
       #container2 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        margin: auto;
         text-align: center;
         z-index: auto;
+        width: 350px;
       }
 
       button {
@@ -56,27 +109,118 @@
       border-radius: 20px;
       }
 
-      #arrows {
-          position: fixed;
-          z-index: 5;
-          margin-top: 50vh;
-          left: 20%; 
+      #arrow1 {
+        position: absolute;
+        z-index: 6;
+        padding-left: 1vw;
+        margin-top: -40vh;
+      }
+
+      #arrow2 {
+        display: flex;
+        justify-content: right;
+        z-index: 6;
+        left: 93vw;
+        margin-top: -40vh;
+        position: absolute;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*MOBILE*/
+
+      @media only screen 
+        and (min-device-width: 375px) 
+        and (max-device-width: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+          body {
+          color: white;
+          margin: 0;
+          background-color: #F099CB;
         }
 
-        #text {
-          margin-top: 10vh;
+        #journal {
+          box-shadow: 5px 5px 8px red;
         }
+
+
+      #desktoponly {display: none;} 
+      #mobileonly {display: block;} 
+
+
+      #container1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        z-index: auto;
+        margin-top: 10vh;
+      }
 
         p {
           font-family: ibm-plex-mono, sans-serif;
          font-weight: 400;
          font-style: normal;
-         font-size: 16px;
+         font-size: 12px;
          color: #fff;
-         line-height: 20px;
+         line-height: 14px;
          text-align: center;
          padding-left: 25px;
          padding-right: 25px;
+        }
+
+        input { 
+      border-radius: 20px;
+      text-align: center; 
+      color: #f9cbdf;
+      background-color: #FF0000;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 12px;
+      text-align: center;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      border-style: none;
+      width: 300px;
+      z-index: 10;
+    } 
+
+    #audio {
+      display: flex;
+      justify-content: center;
+    }
+
+    h3 {
+          font-family: capellina-script, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 30px;
+          color: #f9cbdf;
+          -webkit-text-stroke: 1px #f9cbdf;
+          text-align: center;
+          text-align: center;
+        }
+
+        a:link {
+          text-decoration: none;
+          color: #f9cbdf;
+        }
+
+        a:visited {
+         text-decoration: none;
+          color: #f9cbdf;
         }
 
 
@@ -86,26 +230,72 @@
   </head>
 
   <body>
-
-    <div id="text">
-      <p>if you wish, use this printable journal template to express your emotions and gratitude.</p>
-    </div>
-
-     <div id="arrows">
-     <a href="stillness.html"><img id="arrow1" src="arrow1.png" width="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="exit.html"><img id="arrow2" src="arrow2.png" width="70px"></a>
-    </div>
-
-<div id="container1">
+<div id="desktoponly">
+  <div id="container1">
     <iframe src="journaltemplate.pdf" id="myFrame" frameborder="0" style="border:0;" width="300" height="450">
     </iframe>
   </div>
+  <br>
 
-    <br><br>
+   <div id="text">
+      <p>if you wish, use this printable journal template to express your emotions and gratitude.</p>
+    </div>
+
+
+  <br><br><br><br>
+
+
   <div id="container2">
-    <button id="button" type="button" onclick="printJS({printable:'journaltemplate.pdf', type:'pdf', showModal:true})">
-    Print Me</button>
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+    <input type="button" value="▶︎ play 639hz frequency music to balance emotions" onclick="play()">
+    <audio id="audio" src="639hz.mp3"></audio>
   </div>
+  <a href="stillness.html"><img id="arrow1" src="arrow1.png" width="80px"></a>
+    <a href="exit.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div id="mobileonly">
+<div id="container1">
+  <br><br><br>
+    <img id="journal" src="journal.png" width="300px">
+</div>
+<br>
+<div id="text">
+      <p>if you wish, use this printable journal template to express your emotions and gratitude. [available on desktop only.]</p>
+    </div>
+
+    <br><br><br><br>
+    <div id="audio">
+<script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+    <input type="button" value="▶︎ play 639hz frequency music" onclick="play()">
+    <audio id="audio" src="639hz.mp3"></audio>
+  </div>
+  <h3><a href="thoughtforms.html">back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="stillness.html">next</a></h3>
+
+  </div>
+
+
+
+
 
  
 

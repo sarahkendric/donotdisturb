@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>303: exit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://use.typekit.net/ttk4hxv.css">
+
+    <style>
+
+#mobileonly {display: none;}
+      #desktoponly {display: block;}
+
+      body {
+          background: linear-gradient(-30deg, #2D2639, #1A171F, #000000, #453B58, #2D2639, #070708);
+          background-size: 300% 300%;
+          animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      a {
+         text-decoration: none;
+        }
+
+         h1 {
+          font-family: capellina-script, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+          font-size: 48vw;
+          line-height: 36vh;
+          color: #fef247;
+          -webkit-text-stroke: 2px #fef247;
+          margin-top: 0vh;
+          margin-bottom: 7vh;
+
+        }
+
+        p {
+         font-family: ibm-plex-mono, sans-serif;
+         font-weight: 200;
+         font-style: normal;
+         font-size: 12px;
+         color: #fff;
+         line-height: -5em;
+         text-align: center;
+         padding-left: 25px;
+         padding-right: 25px;
+       }
+
+       h2 {
+         font-family: ibm-plex-mono, sans-serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 16px;
+         color: #fff;
+         line-height: 20px;
+         text-align: center;
+         padding-left: 25px;
+         padding-right: 25px;
+       }
+
+       h3 {
+          font-family: capellina-script, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+          font-size: 50px;
+          color: #fef247;
+          margin-bottom: -30px;
+          margin-top: 15px;
+        }
+
+        input { 
+      display: block; 
+      left: 50%;
+      margin: auto;
+      border-radius: 20px;
+      text-align: center; 
+      background:  #EB62AE; 
+      color: white;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 14px;
+      padding-top: 19px;
+      padding-bottom: 19px;
+      border-style: none;
+      width: 35vw;
+    } 
+
+    #text {
+      width: 40vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+    }
+
+
+
+
+
+
+
+      /*MOBILE*/
+      @media only screen 
+        and (min-device-width: 375px) 
+        and (max-device-width: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+          body {
+          background: linear-gradient(-10deg, #BBA3F3, #7E60C5, #9575E0, #BBA3F3, #CAB8F3);
+          background-size: 300% 300%;
+          animation: gradient 15s ease infinite;
+        }
+
+        #mobileonly {display: block;}
+        #desktoponly {display: none;}
+
+          @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      a {
+         text-decoration: none;
+        }
+
+        h1 {
+          font-family: capellina-script, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+          font-size: 160px;
+          line-height: 75px;
+          color: #2D2639;
+          -webkit-text-stroke: 2px #2D2639;
+
+        }
+
+        p {
+         font-family: ibm-plex-mono, sans-serif;
+         font-weight: 200;
+         font-style: normal;
+         font-size: 12px;
+         color: #2D2639;
+         line-height: -5em;
+         text-align: center;
+         padding-left: 25px;
+         padding-right: 25px;
+       }
+
+       h2 {
+         font-family: ibm-plex-mono, sans-serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 16px;
+         color: #2D2639;
+         line-height: 20px;
+         text-align: center;
+         padding-left: 25px;
+         padding-right: 25px;
+       }
+
+       h3 {
+          font-family: capellina-script, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+          font-size: 50px;
+          color: #EC5EAC;
+          margin-top: 15px;
+        }
+
+        #forms {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: auto;
+      }
+
+      #exit {
+        margin-top: -6vh;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+
+<div id="desktoponly">  
+
+      <h1>thank you</h1>
+      <br><br>
+<div id="text">
+        <p>
+        move around gently and take a few deep breaths to bring awareness back to your body. if you wish, sign the guest book. 
+      </p>
+      <br>
+      <script>
+      function play() {
+
+
+        var audio = document.getElementById("audio");
+        audio.play();
+
+      }
+    </script>
+
+    <input type="button" value="▶︎ play the guided meditation (1:30)" onclick="play()">
+    <audio id="audio" src="528hz.mp3"></audio>
+<br>
+      <a href="https://docs.google.com/document/d/1JEO6T4xhJXF68qfBCiZqRgOgU3xFp8l9jVE0U3Ewqwk/edit?usp=sharing" target="_blank"><h3>sign here</h3></a>
+      <a href="index.html"><h3 id="exit">start over</h3></a>
+    </div>
+    <br><br><br><br><br><br>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="mobileonly">
+    <div id="container">
+
+    <div id="text">
+      <br><br><br><br>
+      <h1>&nbsp;thank &nbsp;you</h1>
+      <br><br><br>
+        <p>
+        move around gently and take a few deep breaths to bring awareness back to your body. if you wish, sign the guest book. 
+      </p>
+      <a href="https://docs.google.com/document/d/1JEO6T4xhJXF68qfBCiZqRgOgU3xFp8l9jVE0U3Ewqwk/edit?usp=sharing" target="_blank"><h3>sign here</h3></a>
+      <a href="index.html"><h3 id="exit">start over</h3></a>
+    </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+
+  </html>

@@ -8,7 +8,171 @@
     <link rel="stylesheet" href="https://use.typekit.net/ttk4hxv.css">
 
     <style>
-      /*baby*/
+#mobileonly {display: none;}
+#desktoponly {display: block;}
+
+
+body {
+        margin: 0;
+        background-color: #afcfbe;
+      }
+
+      h1 {
+      font-family: capellina-script, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 40px;
+      color: #FCF165;
+      line-height: -5em;
+      margin-bottom: -15px;
+        }
+
+         p {
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 12px;
+      color: black;
+      line-height: -5em;
+      text-align: center;
+
+        }
+
+        input { 
+      border-radius: 20px;
+      text-align: center; 
+      background:  #FCF165;
+      color: black;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 12px;
+      text-align: center;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      border-style: none;
+      width: 350px;
+      z-index: 10;
+      margin: auto;
+      margin-top: -15px;
+    } 
+
+        #container {
+          justify-content: center;
+          text-align: center;
+        }
+
+        #container2 {
+          justify-content: center;
+          text-align: center;
+          margin-top: -7vh;
+        }
+
+        #gif {
+          width: 30%;
+          margin-left: 50vw;
+          margin-top: 10vh;
+        }
+
+        .itemscroll {
+        background-color: #FFF5FC;
+        padding: 30px;
+        padding-top: 5px;
+        border-radius: 10px;
+        cursor: move;
+        position: absolute;
+        z-index: 9;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-style: solid;
+        color: #FCF165;
+        border-width: 1px;
+      }
+
+      #item1 {
+        top: 27vh;
+        left: 10vw;
+        overflow: scroll;
+        width: 25vw;
+        height: 60vh;
+      }
+
+      #item2 {
+        left: 5vw;
+        overflow: hidden;
+        height: 20vh;
+        width: 14vw;
+        top: 10vh;
+        z-index: 7;
+        background-image: url("garnet.jpg");
+      }
+
+      /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c3a8f9;
+  border-radius: 10px
+}
+
+
+      #button1 {
+        display: flex;
+        justify-content: left;
+        border-style: none;
+        border-radius: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        background-color: #c3a8f9;
+      }
+
+      a {
+        color: #a6dcf8;
+      }
+
+      #arrow1 {
+        position: absolute;
+        z-index: 6;
+        padding-left: 1vw;
+        margin-top: -40vh;
+      }
+
+      #arrow2 {
+        display: flex;
+        justify-content: right;
+        z-index: 6;
+        left: 93vw;
+        margin-top: -40vh;
+        position: absolute;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*MOBILE*/
       @media only screen 
         and (min-device-width: 375px) 
         and (max-device-width: 667px) 
@@ -18,6 +182,9 @@
           margin: 0;
           background-color: #B6CEBE;
         }
+
+        #mobileonly {display: block;}
+        #desktoponly {display: none;}
 
         p {
          font-family: ibm-plex-mono, sans-serif;
@@ -42,6 +209,28 @@
           margin-bottom: -28px;
           margin-top: 10vh;
         }
+
+        h3 {
+          font-family: capellina-script, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 30px;
+          color: #FCF165;
+          -webkit-text-stroke: 1px #FCF165;
+          text-align: center;
+          text-align: center;
+        }
+
+        a:link {
+          text-decoration: none;
+          color: #FCF165;
+        }
+
+        a:visited {
+         text-decoration: none;
+          color: #FCF165;
+        }
+
 
         #container {
         align-items: center;
@@ -74,6 +263,24 @@
         a {
         color: #a6dcf8;
         }
+
+            input { 
+      display: block; 
+      border-radius: 20px;
+      text-align: center; 
+      background: #FCF165; 
+      color: black;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 14px;
+      padding-top: 19px;
+      padding-bottom: 19px;
+      border-style: none;
+      width: 85vw;
+    } 
 
         input[type='checkbox'] { display: none; } 
     .wrap-collabsible { width: 85vw; } 
@@ -129,27 +336,95 @@
 
     .collapsible-content p { margin-bottom: 0; }
 
-
-      @media screen and (min-width: 1000px) {
-        body {
-          color: red;
-        }
-      }
-
     </style>
 
   </head>
 
   <body>
 
+
+
+
+
+
+
+<div id="desktoponly">
+<div id="container">
+      <h1>the body</h1>
+      <p>allow your breath to align with the animation.<br>this is the "relaxing breath:" in for 4, hold for 7, out for 8.</p><br>
+
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+
+    <input type="button" value="▶︎ play the guided meditation FIX THIS" onclick="play()">
+    <audio id="audio" src="mind.mp3"></audio>
+
+    </div>
+    <div id="gif">
+    <img src="bodybreathe.gif" width="500px">
+  </div>
+
+
+  <div class="itemscroll" id="item1">
+      <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br><br>
+      Feel the connection between your body and the floor. Notice each point that connects your body to the floor.<br><br>
+      (Pause)<br><br>
+      Begin to feel the heaviness of the body sinking into the floor.<br><br>
+      Now come to notice the breath. Feel the belly rise and fall. Feel the chest rise and fall.<br><br>
+      Begin to feel the lightness of the body as you bring awareness to your breath. The body is completely relaxed. The mind is completely aware. The body is feeling light.<br><br>
+      Bring awareness to the toes. Feel the toes on the right foot. Envision your toes attached to your left foot. Left big toe...fourth toe...third toe...second toe...pinkie toe. The left foot. The heel. The sole of the foot. The ankle. The whole of the left foot. The right foot. Right big toe...fourth toe...third toe...second toe...pinkie toe. The right foot. The heel. The sole of the foot. The ankle. The whole of the right foot. Both feet together.<br><br>
+      (Pause.)<br><br>
+      The left leg. The shin. The calf muscle. The knee. The thigh. The left buttock. The whole of the left leg. The right leg. The shin. The calf muscle. The knee. The thigh. The right buttock. The whole of the right leg. Both legs together.<br><br>
+      (Pause.)<br><br>
+      The hips. The lower back. The middle back. The upper back. The whole back. The whole back. The whole back.<br><br>
+      Left shoulder blade. Right shoulder blade. Left shoulder. Left upper arm. Left elbow. Left lower arm. Left wrist. Left hand. Right shoulder. Right upper arm. Right elbow. Right lower arm. Right wrist. Right hand. Both arms together.<br><br>
+      The chest. The ribs. The belly. The whole of the front body. The whole of the front body. The whole of the front body.<br><br>
+      The neck. The back of the head. The forehead. The left eyebrow. The right eyebrow. The space in between the eyebrows. The left eye. The right eye. The left cheek. The right cheek. The jaw. The tongue. The lips. The chin. The throat. The whole of the head. The whole head together. The whole body together.<br><br>
+      Feel the lightness of the whole body together.<br><br>
+      Relax and feel heavy. Sink into the floor. Relax the whole body.<br><br>
+      Relax.<br><br>
+      Feel the body connected to the floor.<br><br>
+      Feel the awareness of your body.<br><br>
+      Begin to make small movements.<br><br><br>
+      <a href="https://yoga.lovetoknow.com/Guided_Meditation_Script"><i>source</i></a><br>
+</p>
+    </div>
+
+    <div class="itemscroll" id="item2">
+      <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br></p>
+    </div>
+
+    <a href="page6.html"><img id="arrow1" src="arrow1.png" width="80px"></a>
+    <a href="index.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
+    
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="mobileonly">
     <div id="text">
       <h1>&nbsp;the body</h1>
       <p>allow your breath to align with the animation. this is the "relaxing breath:" <br>in for 4, hold for 7, out for 8.</p>
-    </div>
-
-    <div id="arrows">
-     <a href="thoughtforms.html"><img id="arrow1" src="arrow1.png" width="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="stillness.html"><img id="arrow2" src="arrow2.png" width="70px"></a>
     </div>
 
     <div id="container">
@@ -160,10 +435,21 @@
 
     <br><br>
 
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+
+    <input type="button" value="▶︎ play the guided meditation FIX THIS" onclick="play()">
+    <audio id="audio" src="mind.mp3"></audio>
+
+<br>
+
     <div class="wrap-collabsible"> 
-      <br>
     <input id="collapsible" class="toggle" type="checkbox"> 
-    <label for="collapsible" class="lbl-toggle">Guided Meditation</label>
+    <label for="collapsible" class="lbl-toggle">meditation script</label>
   
     <div class="collapsible-content"><div class="content-inner">
     <p>
@@ -197,14 +483,13 @@
 
     <div id="item2"></div>
 
+    <h3><a href="thoughtforms.html">back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="stillness.html">next</a></h3>
+
     </div>
 
 
     <br><br><br><br><br><br>
-
-    <audio autoplay>
-      <source src="285hz.mp3">
-    </audio>
+</div>
 
 
 

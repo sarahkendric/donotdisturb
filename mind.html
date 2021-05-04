@@ -8,9 +8,143 @@
     <link rel="stylesheet" href="https://use.typekit.net/ttk4hxv.css">
 
     <style>
-      /*baby*/
+
+      #mobileonly {display: none;}
+      #desktoponly {display: block;}
+
+      body {
+        margin: 0;
+        background-color: #fef247;
+      }
+
+      h1 {
+      font-family: capellina-script, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 40px;
+      color: #EB62AE;
+      line-height: -5em;
+      margin-bottom: -15px;
+        }
+
+         p {
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 12px;
+      color: #2D2639;
+      line-height: -5em;
+      text-align: center;
+
+        }
+
+        #container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+        }
+
+        #gif {
+          margin-left: 16vw;
+          margin-top: 3vh;
+        }
+
+        .itemscroll {        
+        background-color: #FFF5FC;
+        padding: 30px;
+        padding-top: 5px;
+        border-radius: 10px;
+        cursor: move;
+        position: absolute;
+        z-index: 9;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-style: solid;
+        border-color: #EB62AE;
+        border-width: 1px;
+      }
+
+      #item1{
+        top: 30vh;
+        left: 59vw;
+        width: 28vw;
+        height: 58vh;
+        overflow: scroll;
+      }
+
+      #item2 {
+        left: 7vw;
+        overflow: hidden;
+        height: 20vh;
+        width: 14vw;
+        top: 15vh;
+        z-index: 7;
+        background-image: url("amethyst.jpg");
+      }
+
+      #button1 {
+        display: flex;
+        justify-content: left;
+        border-style: none;
+        border-radius: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        background-color: #a6dcf8;
+      }
+
+      a {
+        color: #a6dcf8;
+      }
+
+      input { 
+      border-radius: 20px;
+      text-align: center; 
+      background:  #EB62AE; 
+      color: white;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 12px;
+      text-align: center;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      border-style: none;
+      width: 350px;
+      z-index: 10;
+      margin: auto;
+      margin-top: -15px;
+    } 
+
+      #arrow1 {
+        position: absolute;
+        z-index: 6;
+        padding-left: 1vw;
+        margin-top: -40vh;
+      }
+
+      #arrow2 {
+        display: flex;
+        justify-content: right;
+        z-index: 6;
+        left: 93vw;
+        margin-top: -40vh;
+        position: absolute;
+      }
+
+
+
+
+
+
+
+
+
+
+      /*MOBILE*/
       @media only screen 
-        and (min-device-width: 320px) 
+        and (min-device-width: 375px) 
         and (max-device-width: 667px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
           body {
@@ -18,6 +152,9 @@
           margin: 0;
           background-color: #fef247;
         }
+
+        #mobileonly {display: block;}
+        #desktoponly {display: none;}
 
         p {
          font-family: ibm-plex-mono, sans-serif;
@@ -41,6 +178,27 @@
           text-align: center;
           margin-bottom: -28px;
           margin-top: 10vh;
+        }
+
+        h3 {
+          font-family: capellina-script, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 30px;
+          color: #EB62AE;
+          -webkit-text-stroke: 1px #EB62AE;
+          text-align: center;
+          text-align: center;
+        }
+
+        a:link {
+          text-decoration: none;
+          color: #EB62AE;
+        }
+
+        a:visited {
+         text-decoration: none;
+          color: #EB62AE;
         }
 
         #container {
@@ -68,7 +226,7 @@
           position: fixed;
           z-index: 5;
           margin-top: 45vh;
-          left: 20%; 
+          left: 50%; 
         }
 
 
@@ -76,7 +234,23 @@
         color: #a6dcf8;
         }
 
-
+    input { 
+      display: block; 
+      border-radius: 20px;
+      text-align: center; 
+      background:  #EB62AE; 
+      color: white;
+      transition: all 0.25s ease-out;
+      padding: 16px;
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 14px;
+      padding-top: 19px;
+      padding-bottom: 19px;
+      border-style: none;
+      width: 85vw;
+    } 
 
     input[type='checkbox'] { display: none; } 
     .wrap-collabsible { width: 85vw; } 
@@ -132,40 +306,93 @@
     .collapsible-content p { margin-bottom: 0; }
 
 
-      @media screen and (min-width: 1000px) {
-        body {
-          color: red;
-        }
-      }
-
     </style>
 
   </head>
 
   <body>
 
+
+
+
+
+<div id="desktoponly">
+
+<div id="container">
+      <h1>the mind</h1>
+      <p>allow your breath to align with the animation.<br>this is the "relaxing breath:" in for 4, hold for 7, out for 8.</p><br>
+<script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+
+    <input type="button" value="▶︎ play the guided meditation (1:30)" onclick="play()">
+    <audio id="audio" src="mind.mp3"></audio>
+
+</div>
+
+    <div id="gif"><img src="mindbreathe.gif" width="500px"></div>
+
+
+  <div class="itemscroll" id="item1">
+      <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br><br>
+      I am present. I am here. I am breath. <br><br>
+      Bring awareness to the right hand.<br><br>
+      Notice each finger of the right hand.<br><br>
+      Touch thumb to index finger...thumb to middle finger...thumb to fourth finger...thumb to pinkie finger...thumb to fourth finger...thumb to middle finger...thumb to index finger. Relax the hand. Relax the fingers. Notice the left hand.<br><br>
+      Notice each finger of the left hand.<br><br>
+      Touch left thumb to index finger...thumb to middle finger...thumb to fourth finger...thumb to pinkie finger...thumb to fourth finger...thumb to middle finger thumb to index finger.   Relax the hand.   Relax the fingers.<br>
+      <br><br>
+      <a href="https://yoga.lovetoknow.com/Guided_Meditation_Script"><i>source</i></a><br>
+    </div>
+
+    <div class="itemscroll" id="item2">
+      <p><button onclick="myFunction()" class="button" id="button2"><p>X</p></button><br></p>
+    </div>
+
+    <a href="thoughtforms.html"><img id="arrow1" src="arrow1.png" width="80px"></a>
+    <a href="stillness.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="mobileonly">
     <div id="text">
       <h1>&nbsp;the mind</h1>
       <p>allow your breath to align with the animation. this is the "relaxing breath:" <br>in for 4, hold for 7, out for 8.</p>
     </div>
 
-   <div id="arrows">
-     <a href="thoughtforms.html"><img id="arrow1" src="arrow1.png" width="70px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="stillness.html"><img id="arrow2" src="arrow2.png" width="70px"></a>
-    </div>
-
     <div id="container">
-<br>
     <div id="breathe">
-     <img id="mindbreathe" src="mindbreathe.gif" width="280px">
+     <img id="mindbreathe" src="mindbreathe.gif" width="390px">
     </div>
 
     <br>
 
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+
+    <input type="button" value="▶︎ play the guided meditation (1:30)" onclick="play()">
+    <audio id="audio" src="mind.mp3"></audio>
+
+<br>
     <div class="wrap-collabsible"> 
-      <br>
     <input id="collapsible" class="toggle" type="checkbox"> 
-    <label for="collapsible" class="lbl-toggle">Guided Meditation</label>
+    <label for="collapsible" class="lbl-toggle">meditation script</label>
   
     <div class="collapsible-content"><div class="content-inner">
     <p>
@@ -190,14 +417,71 @@
 
     </div>
 
+    <h3><a href="thoughtforms.html">back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="stillness.html">next</a></h3>
+
+
 
     <br><br><br><br><br><br>
+</div>
 
-   <audio autoplay>
-      <source src="432hz.mp3">
-    </audio>
+
 
     <script src="script.js">
+dragElement(document.getElementById("item1"));
+dragElement(document.getElementById("item2"));
+
+document.getElementById("button");
+button.onclick = function() {
+  document.getElementById("item1").style.display = "none";
+}
+document.getElementById("button2");
+button2.onclick = function() {
+  document.getElementById("item2").style.display = "none";
+}
+
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+  
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+  
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
     </script>
   </body>
 
