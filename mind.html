@@ -6,12 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://use.typekit.net/ttk4hxv.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <style>
 
       #mobileonly {display: none;}
       #desktoponly {display: block;}
 
+      
       body {
         margin: 0;
         background-color: #fef247;
@@ -50,7 +52,7 @@
           margin-top: 3vh;
         }
 
-        .itemscroll {        
+        #draggable1 {        
         background-color: #FFF5FC;
         padding: 30px;
         padding-top: 5px;
@@ -62,9 +64,6 @@
         border-style: solid;
         border-color: #EB62AE;
         border-width: 1px;
-      }
-
-      #item1{
         top: 30vh;
         left: 59vw;
         width: 28vw;
@@ -72,7 +71,7 @@
         overflow: scroll;
       }
 
-      #item2 {
+      #draggable2 {
         left: 7vw;
         overflow: hidden;
         height: 20vh;
@@ -80,9 +79,30 @@
         top: 15vh;
         z-index: 7;
         background-image: url("amethyst.jpg");
+        background-color: #FFF5FC;
+        padding: 30px;
+        padding-top: 5px;
+        border-radius: 10px;
+        cursor: move;
+        position: absolute;
+        z-index: 9;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-style: solid;
+        color: #FCF165;
+        border-width: 1px;
       }
 
       #button1 {
+        display: flex;
+        justify-content: left;
+        border-style: none;
+        border-radius: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        background-color: #a6dcf8;
+      }
+
+      #button2 {
         display: flex;
         justify-content: left;
         border-style: none;
@@ -336,7 +356,8 @@
     <div id="gif"><img src="mindbreathe.gif" width="500px"></div>
 
 
-  <div class="itemscroll" id="item1">
+  <div class="itemscroll" class="ui-widget-content" id="draggable1">
+
       <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br><br>
       I am present. I am here. I am breath. <br><br>
       Bring awareness to the right hand.<br><br>
@@ -346,11 +367,15 @@
       Touch left thumb to index finger...thumb to middle finger...thumb to fourth finger...thumb to pinkie finger...thumb to fourth finger...thumb to middle finger thumb to index finger.   Relax the hand.   Relax the fingers.<br>
       <br><br>
       <a href="https://yoga.lovetoknow.com/Guided_Meditation_Script"><i>source</i></a><br>
+    </p>
     </div>
 
-    <div class="itemscroll" id="item2">
-      <p><button onclick="myFunction()" class="button" id="button2"><p>X</p></button><br></p>
+
+<a href="amethyst.html">
+    <div class="itemscroll" class="ui-widget-content" id="draggable2">
+      <p><button onclick="myFunction2()" class="button" id="button2"><p>X</p></button><br></p>
     </div>
+</a>
 
     <a href="thoughtforms.html"><img id="arrow1" src="arrow1.png" width="80px"></a>
     <a href="stillness.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
@@ -412,8 +437,9 @@
     </div>
 
     <br>
-
+<a href="amethyst.html">
     <div id="item2"></div>
+  </a>
 
     </div>
 
@@ -425,64 +451,49 @@
 </div>
 
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable1" ).draggable();
+  } );
 
-    <script src="script.js">
-dragElement(document.getElementById("item1"));
-dragElement(document.getElementById("item2"));
+   $( function() {
+    $( "#draggable2" ).draggable();
+  } );
 
-document.getElementById("button");
-button.onclick = function() {
-  document.getElementById("item1").style.display = "none";
-}
-document.getElementById("button2");
-button2.onclick = function() {
-  document.getElementById("item2").style.display = "none";
-}
+   $( function() {
+    $( "#gif" ).draggable();
+  } );
 
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-  
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+   function myFunction() {
+  var x = document.getElementById("draggable1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
   } else {
-    
-    elmnt.onmousedown = dragMouseDown;
+    x.style.display = "none";
   }
+}
 
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-  
-    document.onmouseup = null;
-    document.onmousemove = null;
+function myFunction2() {
+  var x = document.getElementById("draggable2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
 }
 
 
-    </script>
+
+
+  </script>
+
+
+
+
+
   </body>
 
   </html>

@@ -107,7 +107,7 @@
 }
 
 
-      #button1 {
+      .button {
         display: flex;
         justify-content: left;
         border-style: none;
@@ -137,7 +137,7 @@
         position: absolute;
       }
 
-      #item1 {
+      #draggable1 {
         top: 37vh;
         left: 66vw;
         overflow: scroll;
@@ -146,7 +146,7 @@
 
       }
 
-      #item2 {
+      #draggable2 {
         left: 58vw;
         overflow: hidden;
         height: 20vh;
@@ -354,14 +354,14 @@
       }
     </script>
 
-    <input type="button" value="▶︎ play the guided meditation FIX THIS" onclick="play()">
-    <audio id="audio" src="mind.mp3"></audio>
+    <input type="button" value="▶︎ play the guided meditation (5:10)" onclick="play()">
+    <audio id="audio" src="heart.mp3"></audio>
     </div>
 
     <div id="gif"><img src="heartbreathe.gif" width="500px"></div>
 
 
-  <div class="itemscroll" id="item1">
+  <div class="itemscroll" id="draggable1">
       <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br><br>
       Like love, air surrounds and sustains us, in this life.<br><br>
       The lesson of the heart is that we must fully love and accept ourselves before we can love and accept others.<br><br>
@@ -381,15 +381,16 @@
       Short pause.<br><br>
       Now call to mind yourself — picture yourself here in this room. Bring your face very clearly into your mind’s eye.<br><br>
       Now using all of this love, compassion, and openness cultivated here in this space, begin to wrap yourself up in love. Sending it out from this space that holds your heart.<br><br>
-      Pause for 3 minutes.<br><br><br>
+      Pause for 1 minute.<br><br><br>
       <a href="https://medium.com/soul-sea/meditation-script-opening-your-heart-chakra-anahata-2c568e127335"><i>source</i></a><br>
 </p>
     </div>
 
-
-      <div class="itemscroll" id="item2">
-      <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br></p>
+<a href="rosequartz.html">
+      <div class="itemscroll" id="draggable2">
+      <p><button onclick="myFunction2()" class="button" id="button1"><p>X</p></button><br></p>
     </div>
+  </a>
 
     <a href="thoughtforms.html"><img id="arrow1" src="arrow1.png" width="80px"></a>
     <a href="stillness.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
@@ -427,8 +428,8 @@
       }
     </script>
 
-    <input type="button" value="▶︎ play the guided meditation FIX THIS" onclick="play()">
-    <audio id="audio" src="mind.mp3"></audio>
+    <input type="button" value="▶︎ play the guided meditation (5:10)" onclick="play()">
+    <audio id="audio" src="heart.mp3"></audio>
 
     <div class="wrap-collabsible"> 
       <br>
@@ -456,7 +457,7 @@
       Short pause.<br><br>
       Now call to mind yourself — picture yourself here in this room. Bring your face very clearly into your mind’s eye.<br><br>
       Now using all of this love, compassion, and openness cultivated here in this space, begin to wrap yourself up in love. Sending it out from this space that holds your heart.<br><br>
-      Pause for 3 minutes.<br><br><br>
+      Pause for 1 minute.<br><br><br>
       <a href="https://medium.com/soul-sea/meditation-script-opening-your-heart-chakra-anahata-2c568e127335" target="blank"><i>source</i></a><br><br>
     </p>
     </div>
@@ -464,8 +465,9 @@
     </div>
 
     <br>
-
+<a href="rosequartz.html">
     <div id="item2"></div>
+  </a>
 
     <h3><a href="thoughtforms.html">back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="stillness.html">next</a></h3>
 
@@ -479,7 +481,46 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable1" ).draggable();
+  } );
+
+   $( function() {
+    $( "#draggable2" ).draggable();
+  } );
+
+   $( function() {
+    $( "#gif" ).draggable();
+  } );
+
+
+   function myFunction() {
+  var x = document.getElementById("draggable1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction2() {
+  var x = document.getElementById("draggable2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+
+  </script>
+
+
   </body>
 
   </html>

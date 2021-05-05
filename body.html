@@ -90,7 +90,7 @@ body {
         border-width: 1px;
       }
 
-      #item1 {
+      #draggable1 {
         top: 27vh;
         left: 10vw;
         overflow: scroll;
@@ -98,7 +98,7 @@ body {
         height: 60vh;
       }
 
-      #item2 {
+      #draggable2 {
         left: 5vw;
         overflow: hidden;
         height: 20vh;
@@ -125,7 +125,7 @@ body {
 }
 
 
-      #button1 {
+      .button {
         display: flex;
         justify-content: left;
         border-style: none;
@@ -360,8 +360,8 @@ body {
       }
     </script>
 
-    <input type="button" value="▶︎ play the guided meditation FIX THIS" onclick="play()">
-    <audio id="audio" src="mind.mp3"></audio>
+    <input type="button" value="▶︎ play the guided meditation (6:00)" onclick="play()">
+    <audio id="audio" src="body.mp3"></audio>
 
     </div>
     <div id="gif">
@@ -369,7 +369,7 @@ body {
   </div>
 
 
-  <div class="itemscroll" id="item1">
+  <div class="itemscroll" id="draggable1">
       <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br><br>
       Feel the connection between your body and the floor. Notice each point that connects your body to the floor.<br><br>
       (Pause)<br><br>
@@ -393,10 +393,11 @@ body {
       <a href="https://yoga.lovetoknow.com/Guided_Meditation_Script"><i>source</i></a><br>
 </p>
     </div>
-
-    <div class="itemscroll" id="item2">
-      <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br></p>
+<a href="garnet.html">
+    <div class="itemscroll" id="draggable2">
+      <p><button onclick="myFunction2()" class="button" id="button2"><p>X</p></button><br></p>
     </div>
+  </a>
 
     <a href="thoughtforms.html"><img id="arrow1" src="arrow1.png" width="80px"></a>
     <a href="stillness.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
@@ -442,8 +443,8 @@ body {
       }
     </script>
 
-    <input type="button" value="▶︎ play the guided meditation FIX THIS" onclick="play()">
-    <audio id="audio" src="mind.mp3"></audio>
+    <input type="button" value="▶︎ play the guided meditation (6:00)" onclick="play()">
+    <audio id="audio" src="body.mp3"></audio>
 
 <br>
 
@@ -480,8 +481,9 @@ body {
     </div>
 
     <br>
-
+<a href="garnet.html">
     <div id="item2"></div>
+  </a>
 
     <h3><a href="thoughtforms.html">back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="stillness.html">next</a></h3>
 
@@ -493,7 +495,46 @@ body {
 
 
 
-    <script src="script.js"></script>
+
+      
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable1" ).draggable();
+  } );
+
+   $( function() {
+    $( "#draggable2" ).draggable();
+  } );
+
+   $( function() {
+    $( "#gif" ).draggable();
+  } );
+
+
+   function myFunction() {
+  var x = document.getElementById("draggable1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction2() {
+  var x = document.getElementById("draggable2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+    </script>
+
+
   </body>
 
   </html>

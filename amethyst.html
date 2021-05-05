@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>777: intuition</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width" name="viewport">
+  <link href="https://use.typekit.net/ttk4hxv.css" rel="stylesheet">
+  <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+  <style>
+
+       #mobileonly {display: none;}
+       #desktoponly {display: block;}
+
+       body {
+           background-image: url("amethyst.png");
+           background-size: cover;
+           margin: 0;
+       }
+
+         #message1 {
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           margin-top: 30vh;
+           position: relative;
+           z-index: auto;
+         }
+
+     #message1 {
+     -webkit-animation: fadein 8s ease-in alternate infinite;
+     -moz-animation: fadein 8s ease-in alternate infinite;
+     animation: fadein 8s ease-in alternate infinite;
+  }
+
+  #arrows {
+     -webkit-animation: fadein 8s ease-in;
+     -moz-animation: fadein 8s ease-in;
+     animation: fadein 8s ease-in;
+     margin-top: -16vh;
+  }
+
+         @keyframes fadein {
+     from { opacity: 0; }
+     to { opacity: 1; }
+  }x
+
+  @-webkit-keyframes fadein {
+     from { opacity: 0; }
+     to { opacity: 1; }
+  }
+
+  @-moz-keyframes fadein {
+     from { opacity: 0; }
+     to { opacity: 1; }
+  }
+
+     #arrow1 {
+         position: absolute;
+         z-index: 6;
+         padding-left: 1vw;
+       }
+
+       #arrow2 {
+         display: flex;
+         justify-content: right;
+         z-index: 6;
+         left: 93vw;
+         position: absolute;
+         padding-right: 1vw;
+       }
+
+
+
+        /*MOBILE*/
+       @media only screen 
+         and (min-device-width: 375px) 
+         and (max-device-width: 667px) 
+         and (-webkit-min-device-pixel-ratio: 2) { 
+
+           #mobileonly {display: block;}
+           #desktoponly {display: none;}
+           
+           body {
+           background-image: url("amethystmobile.png");
+           background-size: 100vh;
+           margin: 0;
+       }
+
+       #message1 {
+     -webkit-animation: fadein 8s ease-in alternate infinite;
+     -moz-animation: fadein 8s ease-in alternate infinite;
+     animation: fadein 8s ease-in alternate infinite;
+  }
+
+  #arrows {
+     -webkit-animation: fadein 8s ease-in;
+     -moz-animation: fadein 8s ease-in;
+     animation: fadein 8s ease-in;
+     margin-top: 22vh;
+  }
+
+         @keyframes fadein {
+     from { opacity: 0; }
+     to { opacity: 1; }
+  }x
+
+  @-webkit-keyframes fadein {
+     from { opacity: 0; }
+     to { opacity: 1; }
+  }
+
+  @-moz-keyframes fadein {
+     from { opacity: 0; }
+     to { opacity: 1; }
+  }
+
+  h3 {
+           font-family: capellina-script, sans-serif;
+           font-weight: 400;
+           font-style: normal;
+           font-size: 30px;
+           color: #FCF165;
+           -webkit-text-stroke: 1px #FCF165;
+           text-align: center;
+           text-align: center;
+         }
+
+         a:link {
+           text-decoration: none;
+           color: #FCF165;
+         }
+
+         a:visited {
+          text-decoration: none;
+           color: #FCF165;
+         }
+
+     
+
+
+
+
+  </style>
+</head>
+
+
+
+
+<body>
+  <div id="desktoponly">
+    <div id="message1"><img src="message1.png" width="350px"></div>
+    <div id="arrows">
+      <a href="mind.html"><img id="arrow1" src="arrow1.png" width="80px"></a> <a href="stillness.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
+    </div>
+  </div>
+
+
+  <div id="mobileonly">
+    <div id="message1"><img src="message1.png" width="300px"></div>
+
+    <div id="arrows">
+    <h3><a href="mind.html">back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="stillness.html">next</a></h3>
+  </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
